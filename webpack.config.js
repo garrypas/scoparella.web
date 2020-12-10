@@ -10,9 +10,12 @@ module.exports = {
         use: [{ loader: "style-loader" }, { loader: "css-loader" }],
       },
       {
-        test: /\.jsx$/,
+        test: /\.tsx$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: "ts-loader",
+        options: {
+          transpileOnly: true
+        }
       },
       {
         test: /\.html?$/,
@@ -26,8 +29,9 @@ module.exports = {
     ],
   },
   entry: {
-    index: "./src/index.jsx",
+    index: "./src/index.tsx",
   },
+  devtool: 'inline-source-map',
   output: {
     filename: "[name].js",
     chunkFilename: "[name].js",

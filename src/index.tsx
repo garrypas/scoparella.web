@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import React, { Suspense } from 'react';
 import './index.css';
-const Home = React.lazy(() => import(/* webpackChunkName: "home" */ './components/home/home.jsx'));
-const History = React.lazy(() => import(/* webpackChunkName: "history" */ './components/history/history.jsx'));
+const Home = React.lazy(() => import(/* webpackChunkName: "home" */ './components/home/home.tsx'));
+const History = React.lazy(() => import(/* webpackChunkName: "history" */ './components/history/history.tsx'));
 import { BrowserRouter, Route, Link } from "react-router-dom";
 const logo = "./images/googlelogo.png";
 
